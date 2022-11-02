@@ -1,0 +1,6 @@
+Contact: sparks@wuffs.net
+Expires: 2023-01-01T07:59:00.000Z
+Encryption: https://s.wuffs.net/pgp
+Encryption: Passcode: qutCHzn3U8UX!5XNeI
+Preferred-Languages: en
+Canonical: https://secure.wuffs.net/.well-known/security.txt
