@@ -1,0 +1,256 @@
+*{
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-wrap: break-word;
+}
+
+body{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    min-width: 1140px;
+}
+
+.backgroundImageContainer{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.backgroundImage{
+    position: relative;
+    height: 100%;
+    background-position: 50%;
+    background-image: url("/images/5269961.jpg");
+    background-repeat: no-repeat;
+}
+
+.tittle, .subTittle{
+    text-align: center;
+}
+
+.tittle{
+    padding-top: 20px;
+    font-size: 52px;
+}
+
+.subTittle{
+    font-size: 20px;
+    padding-bottom: 4px;
+}
+
+.mainContainer{
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+    background-clip: content-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    vertical-align: top;
+    border-radius: 50px / 50px;
+}
+
+.container{
+    padding: 10%;
+    display: grid;
+    grid-template-areas: 
+    'image header header'
+    'image about hobby'
+    'image coding hobby'
+    'space space space'
+    'links links links';
+    gap: 10px;
+    padding: 10px;
+}
+
+.image{
+    display: grid;
+    justify-content: center;
+    grid-area: image;
+}
+
+.image > img{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header{
+    grid-area: header;
+    padding: 10px 10px 10px 0px;
+}
+
+.about{
+    grid-area: about;
+}
+
+.coding{
+    grid-area: coding;
+}
+
+.hobby{
+    grid-area: hobby;
+}
+
+.space{
+    grid-area: space;
+    height: 80px;
+}
+
+.links{
+    grid-area: links;
+    padding: 10%;
+    display: grid;
+    grid-template-areas: 'contactMe things gaymerStuff';
+    gap: 10px;
+    padding: 10px;
+}
+
+.contactMe{
+    grid-area: contactMe;
+}
+
+.gaymerStuff{
+    grid-area: gaymerStuff;
+}
+
+.things{
+    grid-area: things;
+}
+
+.links{
+    padding: 0 125px;
+}
+
+.links > div{
+    margin: 0 auto;
+}
+
+.links > div > div{
+    display: flex;
+}
+
+.links > div > div > *{
+    padding: 10px;
+}
+
+.links > div > div > a{
+    display: flex;
+    align-items: center;
+}
+
+.links > div > h2{
+    padding-bottom: 5px;
+}
+
+.links > div > div > img{
+    width: 64px;
+    height: 64px;
+}
+
+@media only screen and (max-width: 1200px) { 
+    body {
+        min-width: 800px;
+    }
+    .container{
+        grid-template-areas: 
+            'image header'
+            'image about'
+            'image coding'
+            'image hobby'
+            'space space'
+            'links links';
+    }
+    .links{
+        padding: 0 80px;
+        grid-template-areas: 
+        'contactMe things '
+        'gaymerStuff gaymerStuff';
+    }
+    .gaymerStuff > div{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 860px) { 
+    body {
+        min-width: 500px;
+    }
+    .container{
+        grid-template-areas: 
+            'image'
+            'header'
+            'about'
+            'coding'
+            'hobby'
+            'space'
+            'links';
+    }
+    .container > div{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .links{
+        padding: 0px;
+        grid-template-areas: 
+        'contactMe things'
+        'gaymerStuff gaymerStuff';
+    }
+    .gaymerStuff > div{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 860px) { 
+    body {
+        min-width: 500px;
+    }
+    .container{
+        grid-template-areas: 
+            'image'
+            'header'
+            'about'
+            'coding'
+            'hobby'
+            'space'
+            'links';
+    }
+    .links{
+        padding: 0px;
+        grid-template-areas: 
+        'contactMe'
+        'things '
+        'gaymerStuff';
+    }
+}
+
+@media only screen and (max-width: 620px) { 
+    body {
+        min-width: 0px;
+        width: 100%;
+        margin: 0;
+    }
+    .container{
+        width: 100%;
+        display: block;
+    }
+    .container > div{
+        display: block;
+        width: 100%;
+    }
+    .links{
+        padding: 0px;
+        grid-template-areas: 
+        'contactMe'
+        'things '
+        'gaymerStuff';
+    }
+    .links > div > div, .links > div > h2{
+        display: flex;
+        justify-content: center;
+    }
+}
