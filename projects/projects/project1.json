@@ -1,0 +1,8 @@
+// project1.json
+{
+  "title": "Project 1",
+  "description": "Description of Project 1.",
+  "startDate": "2023-01-01",
+  "endDate": "2023-02-01",
+  "image": "project1.png"
+}
