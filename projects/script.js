@@ -6,12 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
     fetchProjects();
 
     async function fetchProjects() {
-        const response = await fetch('./projects');
-        const projects = await response.json();
+        try {
+            const response = await fetch('./projects');
+            const projects = await response.json();
 
-        projects.forEach(project => {
-            renderProject(project);
-        });
+            projects.forEach(project => {
+                renderProject(project);
+            });
+        } catch (error) {
+            console.error('Error fetching or parsing JSON:', error);
+        }
     }
 
     function renderProject(project) {
